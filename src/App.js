@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+import { Box, Container } from '@mui/material';
+import { useState } from 'react';
 import './App.css';
+import Header from './components/header';
+import PageEdit from './components/PageEdit';
 
 function App() {
+  const [isEdit, setIsedit] = useState(false)
+  const handleClick = () => {
+    setIsedit(!isEdit)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container >
+      <Box className="App">
+        {isEdit ? <PageEdit handleClick={handleClick} /> : <Header handleClick={handleClick} />}
+      </Box>
+    </Container>
   );
 }
 

@@ -1,8 +1,86 @@
 .App {
   text-align: center;
+  background-color: #0f172a;
+  min-height: 100vh;
+  max-width: 600px;
+  margin: auto;
 }
 
-.App-logo {
+.header {
+  background-color: #fb923c;
+  width: 100%;
+  min-height: 300px;
+  position: relative;
+}
+
+.header .edit {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: black;
+  color: #fff;
+}
+
+.header .info-content .avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.page-edit {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.page-edit .save-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #a21caf;
+  color: #fff;
+  font-weight: 700;
+}
+
+.page-edit .form-edit {
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+}
+
+.page-edit .form-edit .MuiFormControl-root {
+  width: 80%;
+  margin: auto;
+}
+
+.page-edit .form-edit .MuiFormControl-root .MuiFormLabel-root {
+  font-weight: 700;
+}
+
+.page-edit .form-edit .MuiFormControl-root .MuiInputBase-root .MuiInputBase-input {
+  color: #fff !important;
+}
+
+.profile-pictrue .list-avatar {
+  width: 100%;
+  margin-top: 32px;
+}
+
+.profile-pictrue .list-avatar .avatar-item {
+  margin: auto;
+}
+
+.profile-pictrue .list-avatar .avatar-item .image-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+
+
+.page-edit .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -32,6 +110,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
