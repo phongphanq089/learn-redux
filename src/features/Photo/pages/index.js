@@ -1,9 +1,17 @@
-import React from 'react';
+import NodeFound from 'components/PageNodeFound';
+import { Route, Routes } from 'react-router-dom';
+import AddPage from './AddEdit';
+import MainPage from './Main';
 
-const MainPage = () => {
+const Photos = ( props ) => {
     return (
-        <div>MainPage</div>
+        <Routes>
+            <Route path="/" element={ <MainPage /> } />
+            <Route path="/add" element={ <AddPage /> } />
+            <Route path=":photoId" element={ <AddPage /> } />
+            <Route element={ <NodeFound /> } />
+        </Routes>
     );
 };
 
-export default MainPage;
+export default Photos;

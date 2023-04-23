@@ -1,8 +1,15 @@
-import React from 'react';
+import { Box } from '@mui/material';
+import Banner from 'components/Banner/Banner';
+import PhotoForm from 'features/Photo/componets/PhotoForm/PhotoForm';
 
 const AddPage = () => {
     return (
-        <div>AddPage</div>
+        <Box className="edit-page">
+            <Banner title="Pick your amazing photo 😎" />
+            <Box >
+                <PhotoForm />
+            </Box>
+        </Box>
     );
 };
 
